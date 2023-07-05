@@ -1,0 +1,25 @@
+@use 'variaveis';
+
+.header {
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundoHeader;
+    transition: background-color .5s ease;
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color .5s ease;
+        visibility: hidden;
+    }
+
+    &__container {
+        padding: 4px 36px;
+
+        &__logo {
+            max-width: 80px;
+            width: 100%;
+            margin: 5px;
+            transition: opacity .5s ease;
+        }
+    }
+}

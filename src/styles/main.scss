@@ -1,0 +1,44 @@
+@use 'variaveis';
+@use 'header';
+@use 'logo';
+@use 'about';
+@use 'movies';
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap');
+
+@mixin text($fontSize: 20px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 24px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+    font-weight: bold;
+    border-bottom: 2px solid variaveis.$corTextoPrincipal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    list-style: none;
+}
+
+body {
+    background: variaveis.$corDeFundo url(../../dist/images/fundo.png);
+}
+
+.box-shadow {
+    border-radius: 8px;
+    box-shadow: 5px 4px 10px variaveis.$shadow;
+}
+
+.text {
+    @include text;
+}
+
+.title {
+    @include title;
+}
